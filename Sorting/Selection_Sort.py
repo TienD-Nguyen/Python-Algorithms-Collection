@@ -1,3 +1,11 @@
+"""
+Selection Sort Algorithm.
+
+*   19/01/2022  Initial coding of selection_sort function
+*   20/01/2022  Adding code for selectionsort function which requires extra space compared to other function
+
+"""
+
 def selection_sort(arr=[]):
     for i in range(len(arr) - 1):
         min = i
