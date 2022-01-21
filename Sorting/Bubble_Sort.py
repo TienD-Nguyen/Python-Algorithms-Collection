@@ -1,3 +1,11 @@
+"""
+Bubble Sort Algorithm
+
+*   20/01/2022  Initial Code
+*   21/01/2022  Added recursive method
+
+"""
+
 def bubble_sort(arr=[]):
 
     n = len(arr)
