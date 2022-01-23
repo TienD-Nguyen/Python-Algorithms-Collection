@@ -20,23 +20,28 @@ def insertion_sort(arr=[]):
     return arr
 
 
-def recursive_insertion_sort(arr=[]):
-    n = len(arr)
-    if n <= 1:
+def recursive_insertion_sort(arr, arr_length):
+    if arr_length <= 1:
         return
 
-    recursive_insertion_sort(arr, n - 1)
+    recursive_insertion_sort(arr, arr_length - 1)
 
-    last_element = arr[n-1]
-    j = n - 2
+    last_element = arr[arr_length-1]
+    j = arr_length - 2
     while j >= 0 and arr[j] > last_element:
         arr[j+1] = arr[j]
         j -= 1
 
     arr[j+1] = last_element
 
+    return arr
+
 
 if __name__ == "__main__":
     unsorted_arr = [9, 3, 5, 1, 2, 10, 69, 29, 44]
+
     sorted_arr = insertion_sort(unsorted_arr)
+    recursive_sorted_arr = recursive_insertion_sort(unsorted_arr, len(unsorted_arr))
+
     print(sorted_arr)
+    print(recursive_sorted_arr)
